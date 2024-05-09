@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+    
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F192BD;
+    display: grid; 
+    grid-template-columns: 1fr 2.5fr 1fr 1.5fr 1fr; 
+    grid-template-rows: 8.5fr 1fr 7fr 1fr 6fr 8fr 2.5fr 5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . .";
+}
+h1{
+    font-family: "EB Ackerhof", sans-serif;
+    font-weight: 400;
+    font-size: 3vw;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    grid-column: 1 / span 2; 
+}
+.cards{
+    height: 40vh;
+    width: auto;
+    position: relative;
+}
+#cardo{
+    grid-column: 3 ; /* starts at column 3 and spans 2 columns */
+    grid-row: 5; /* starts at row 8 */
+    transform: rotate(10deg);
+    margin-left: -5vw;
+    margin-top: -3vh;
+    z-index: 2;
+    transition-timing-function: ease;
+    transition-duration: .5s;
+}
+#cardo:hover {
+    z-index: 5;
+    transform: rotate(5deg);
+}
+
+#cardy{
+    grid-column: 3; 
+    grid-row: 3 ; 
+    transform: rotate(-10deg);
+    margin-left: -5vw;
+    margin-top: 5vh;
+    z-index: 1;
+    transition-timing-function: ease;
+    transition-duration: .5s;
+}
+#cardy:hover {
+    z-index: 5;
+    transform: rotate(0deg);
+}
+
+#cardb{
+    grid-column: 2; 
+    grid-row: 5 ;
+    margin-left: 5vw; 
+    margin-top: -5vh;
+    transform: rotate(-3deg);
+    z-index: 4;
+    transition-timing-function: ease;
+    transition-duration: .5s;
+}
+#cardb:hover {
+    transform: rotate(5deg);
+}
+
+#cardg{
+    grid-column: 2; 
+    grid-row: 3 ; 
+    margin-left: 10vw;
+    margin-top: 2vh;
+    transform: rotate(5deg);
+    z-index: 3;
+    transition-timing-function: ease;
+    transition-duration: .5s;
+}
+#cardg:hover {
+    z-index: 5;
+    transform: rotate(0deg);
+}
+#sketchContainer{ 
+    grid-column: 2; 
+    grid-row: 3 ; 
+    margin-top: 5vh;
+    margin-left: 10vw;
+    width: 70vw;
+    height: 75vh;
+}
